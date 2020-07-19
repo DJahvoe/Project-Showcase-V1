@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="_codemirror/lib/codemirror.css" />
+		<link rel="stylesheet" href="_codemirror/theme/dracula.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Project Showcase</title>
+	</head>
+	<body>
+		<!-- TEMP -->
+		<iframe
+			src="./Menus/1. Icon Bar/index.html"
+			style="display: none;"
+			id="temp"
+		></iframe>
+
+		<!-- MAIN -->
+		<div class="container">
+			<div id="header"><h1>Header</h1></div>
+
+			<div id="content">
+				<div id="option">
+					<!-- Trigger/Open The Modal -->
+					<a id="myBtn" href="#" class="my-icon"><i class="fa fa-bars"></i></a>
+					<!-- <button id="myBtn"></button> -->
+				</div>
+				<textarea id="editor" name="editor"></textarea>
+				<iframe id="preview" frameborder="0"></iframe>
+			</div>
+		</div>
+
+		<!-- MODAL -->
+		<div id="myModal" class="modal">
+			<!-- Modal Content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<!-- Modal Search -->
+				<div class="modal-search">
+					<input
+						type="text"
+						class="modal-search-bar"
+						placeholder="Search CSS Project"
+					/>
+				</div>
+
+				<!-- Modal Body -->
+				<div class="modal-body">
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST1</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST2</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST3</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST4</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST5</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST6</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST7</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST8</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST9</p>
+					</div>
+					<div class="modal-folder">
+						<a href="#" class="modal-folder-button">
+							<i class="fa fa-folder"></i>
+						</a>
+						<p>TEST10</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JAVASCRIPT -->
+		<script type="text/javascript" src="_codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="_codemirror/mode/xml/xml.js"></script>
+		<script
+			type="text/javascript"
+			src="_codemirror/mode/javascript/javascript.js"
+		></script>
+		<script type="text/javascript" src="_codemirror/mode/css/css.js"></script>
+		<script
+			type="text/javascript"
+			src="_codemirror/mode/htmlmixed/htmlmixed.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="_codemirror/addon/edit/closetag.js"
+		></script>
+		<script src="app.js"></script>
+		<script src="app-view.js"></script>
+	</body>
+</html>

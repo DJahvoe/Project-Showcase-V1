@@ -1,0 +1,241 @@
+:root {
+	--default-browser-color: white;
+	--background-color: #202020;
+	--text-color: white;
+	--text-hover-color: rgb(101, 101, 101);
+	--primary-color: rgb(99, 140, 235);
+	--secondary-color: rgb(64, 93, 159);
+	--ternary-color: rgb(41, 52, 78);
+	--font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--secondary-color);
+}
+
+body {
+	font-family: var(--font-family);
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+}
+
+#header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--font-family);
+	width: 100%;
+	height: 15%;
+	background: var(--background-color);
+}
+
+#header h1 {
+	color: var(--primary-color);
+	text-transform: uppercase;
+}
+
+#content {
+	display: flex;
+	justify-content: space-evenly;
+
+	width: 100%;
+	height: 85%;
+	background: var(--background-color);
+
+	padding-bottom: 10px;
+}
+
+#content .CodeMirror,
+#content #preview {
+	width: 48%;
+	height: 100%;
+}
+
+#content #option {
+	display: flex;
+	width: 4%;
+	height: 50px;
+	background: var(--background-color);
+	overflow: auto;
+}
+
+#content #option .my-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-size: 28px;
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--primary-color);
+}
+
+#content #option .my-icon:hover {
+	background: var(--primary-color);
+	color: var(--background-color);
+}
+
+#content .CodeMirror {
+	font-family: monospace;
+	font-size: 14px;
+}
+
+#content #preview {
+	background: var(--default-browser-color);
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1000; /* Sit on top */
+	left: 0;
+	top: 0;
+	padding: 40px;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	color: var(--text-color);
+	font-family: var(--font-family);
+}
+
+.modal-show {
+	display: block;
+	animation: show-animation 0.5s ease;
+}
+
+.modal-hide {
+	display: none;
+	animation: hide-animation 0.5s ease;
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: var(--ternary-color);
+	margin: auto;
+	padding: 20px;
+	width: 95%;
+	height: 100%;
+}
+
+/* Modal Search */
+.modal-search {
+	width: 100%;
+	height: 50px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.modal-search .modal-search-bar {
+	width: 80%;
+	height: 100%;
+	padding-left: 10px;
+	font-size: 30px;
+	border-radius: 5px;
+	border-color: transparent;
+	font-weight: bold;
+}
+
+.modal-search .modal-search-bar:focus {
+	background: var(--secondary-color);
+	color: var(--text-color);
+}
+
+.modal-search .modal-search-bar:focus::placeholder {
+	color: var(--text-color);
+}
+
+/* Modal Body */
+.modal-body {
+	background: var(--secondary-color);
+	width: 95%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: center;
+	border-radius: 15px;
+	margin: 40px auto 0px;
+	padding: 30px;
+}
+
+.modal-body .modal-folder {
+	text-align: center;
+	flex-basis: 25%;
+}
+
+.modal-body .modal-folder p {
+	margin-top: -15px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.modal-body .modal-folder-button i {
+	color: var(--primary-color);
+	font-size: 125px;
+	transition: color 0.5s;
+}
+
+.modal-body .modal-folder-button i:hover {
+	color: var(--text-color);
+}
+
+/* The Close Button */
+.close {
+	color: var(--text-color);
+	float: right;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: var(--primary-color);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@keyframes show-animation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hide-animation {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
